@@ -1,3 +1,5 @@
+// All the layouts as in default
+// But configured for no statusline
 layout{
 
 	swap_tiled_layout name="vertical" {
@@ -46,7 +48,7 @@ layout{
 
 	// will not start until you have min panes in your window
 	swap_tiled_layout name="stacked" {
-		tab min_panes=3 {
+		tab min_panes=2 {
 			pane split_direction="vertical" {
 				// show 1
 				pane

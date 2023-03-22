@@ -27,6 +27,9 @@ keybinds {
         bind "Alt m" { SwitchToMode "move"; }
         bind "Alt n" { NewPane; }
         bind "Alt x" { NextSwapLayout; }
+        bind "Alt ]"  { GoToPreviousTab; }
+        bind "Alt ["  { GoToNextTab; }
+        bind "Alt f" { ToggleFloatingPanes; SwitchToMode "Normal"; }
     }
     pane clear-defaults=true {
         bind "Enter" "Esc" "Space" { SwitchToMode "normal"; }
@@ -37,7 +40,7 @@ keybinds {
         bind "p" { SwitchFocus; }
         bind "n" { NewPane; }
         bind "x" { CloseFocus; }
-        bind "f" { ToggleFocusFullscreen;TogglePaneFrames;}
+        bind "f" { ToggleFocusFullscreen;TogglePaneFrames;SwitchToMode "Normal";}
         bind "z" { TogglePaneFrames; }
         bind "Space" { PreviousSwapLayout; }
         bind "w" { ToggleFloatingPanes; SwitchToMode "Normal"; }
@@ -45,8 +48,8 @@ keybinds {
 
     tab clear-defaults=true {
         bind "Enter" "Esc" "Space" { SwitchToMode "normal"; }
-        bind "h" "Left" { GoToPreviousTab; }
-        bind "l" "Right" { GoToNextTab; }
+        bind "h"  { GoToPreviousTab; }
+        bind "l"  { GoToNextTab; }
         bind "n" { NewTab; }
         bind "x" { CloseTab; }
         bind "s" { ToggleActiveSyncTab; }
